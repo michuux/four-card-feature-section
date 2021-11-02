@@ -1,0 +1,172 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+
+:root{
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+
+    --dark-blue: hsl(234, 12%, 34%);
+    --grayish-blue: hsl(229, 6%, 66%);
+    --light-gray: hsl(0, 0%, 98%);
+
+    font-size: 62.5%;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    margin: 2.5em;
+    background-color: var(--light-gray);
+}
+
+
+/* ---------------- */
+/* -----header----- */
+/* ---------------- */
+
+#header{
+    text-align: center;
+    margin: 3em 0 4.5em 0;
+}
+
+.header__title{
+    color: var(--dark-blue);
+    font-size: 2em;
+    font-weight: 200;
+}
+
+.header__paragraph{
+    color: var(--grayish-blue);
+    font-size: 1.3em;
+    margin: 1em auto 0 auto;
+    max-width: 55ch;
+}
+
+
+/* ----------------- */
+/* ------cards------ */
+/* ----------------- */
+
+#cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1260px;
+    margin: 0 auto;
+    gap: 2.25em;
+    margin-bottom: 2.35em;
+}
+
+.card{
+    padding: 2.5em;
+    border-radius: 6px;
+    background-color: white;
+    box-shadow: 0 0 8px 1px rgba(0,0,0,0.2);
+    border-top: 4px solid transparent;
+    max-width: 375px;
+}
+
+.card--cyan{
+    border-color: var(--cyan);
+}
+
+.card--red{
+    border-color: var(--red);
+}
+
+.card--orange{
+    border-color: var(--orange);
+}
+
+.card--blue{
+    border-color: var(--blue);
+}
+
+.card__title{
+    font-size: 1.8em;
+    font-weight: 600;
+    color: var(--dark-blue);
+    margin-bottom: .2em;
+}
+
+.card__paragraph{
+    font-size: 1.15em;
+    line-height: 1.8;
+    color: var(--grayish-blue);
+    margin-bottom: 3em;
+}
+
+.card__image{
+    display: block;
+    width: 4.8em;
+    margin-left: auto;
+}
+
+
+/* ----------------- */
+/* ------media------ */
+/* ----------------- */
+
+@media screen and (min-width:340px){
+    body{
+        font-size: 1.15rem;
+    }
+}
+
+@media screen and (min-width:430px){
+    body{
+        font-size: 1.2rem;
+    }
+
+    .header__title{
+        font-size: 2.5em;
+    }
+}
+
+@media screen and (min-width:620px){
+    body{
+        font-size: 1.25rem;
+    }
+}
+
+@media screen and (min-width:850px){
+    .header__title{
+        font-size: 2.8em;
+    }
+
+    #cards{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (min-width:1244px) {
+
+    body{
+        font-size: 1.3rem;
+        margin: 0;
+    }
+
+    #cards{
+        gap: 2.8em;
+    }
+
+    .card--cyan,.card--blue{
+        transform: translateY(50%);
+    }
+
+    .card--blue{
+        order: 3;
+    }
+
+    .card--orange{
+        order: 4;
+    }
+}
+
+
+.attribution { color: var(--grayish-blue); font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
