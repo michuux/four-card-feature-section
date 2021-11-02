@@ -150,6 +150,10 @@ body{
         margin: 0;
     }
 
+    #header{
+        margin: 4em 0 5em 0;
+    }
+
     #cards{
         gap: 2.8em;
     }
@@ -165,8 +169,14 @@ body{
     .card--orange{
         order: 4;
     }
+
+    .attribution{
+        position: absolute;
+        right: 1em;
+        top: 1em;
+    }
 }
 
 
-.attribution { color: var(--grayish-blue); font-size: 11px; text-align: center; }
+.attribution { color: var(--grayish-blue); font-size: 10px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
